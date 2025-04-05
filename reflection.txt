@@ -1,0 +1,40 @@
+# Reflection on Ayoayo Game Implementation
+
+## Initial Reflection
+
+When I first received this assignment, I had to research Ayoayo as I wasn't familiar with the game. I started by thoroughly reading the rules to understand the game mechanics. My initial approach was to:
+
+1. Design a data structure to represent the game board
+2. Implement the basic movement rules
+3. Add the special rules (extra turn and capturing)
+4. Create test cases to validate the implementation
+
+I decided to use a single array to represent the entire board as it would make the implementation of seed movement more straightforward. I could simply increment indices with modulo arithmetic to move around the board in a counter-clockwise direction.
+
+## Implementation Challenges
+
+During implementation, I faced several challenges:
+
+1. Board Representation; I needed to decide how to represent the board in code. I chose a single array where indices 0-5 represent Player 1's pits, index 6 is Player 1's store, indices 7-12 are Player 2's pits, and index 13 is Player 2's store.
+
+2. Seed Distribution Logic; Implementing the counter-clockwise movement while skipping the opponent's store required careful index manipulation.
+
+3. Capture Rule; Determining when a capture should occur and which pit to capture from was tricky. I created a helper method to check if a capture condition was met.
+
+4. Game End Detection; Efficiently checking if all pits on one side are empty and handling the end-game scenario where remaining seeds are moved to the appropriate store.
+
+## Final Reflection
+
+This project gave me valuable experience in implementing game rules and state management in code. I focused on creating clean, well-documented code with clear method names and appropriate comments.
+
+If I had more time, I would have:
+
+1. Implemented a more user-friendly text interface for interactive play
+2. Added more comprehensive error handling
+3. Created a method to set up custom board states for more thorough testing
+4. Possibly added a simple AI opponent
+
+Overall, this was an interesting challenge that required careful thinking about data structures and game logic implementation. I'm satisfied with my solution as it correctly implements all the required game rules while maintaining clean, maintainable code.
+
+
+
